@@ -40,6 +40,28 @@ def extract_mesh(volume, threshold=1):
     verts, faces, normals, values = measure.marching_cubes(volume, level=threshold)
     return verts, faces, values
 
+def adjust_scales(verts, folder_name):
+    """
+    Adjust scales for the z-axis based on the folder name.
+
+    Args:
+        verts (np.ndarray): Vertices of the isosurface.
+        folder_name (str): Name of the folder to check for CT images.
+
+    Returns:
+        np.ndarray: Scaled vertices.
+    """
+    scale_xy = 10 / 17.53
+
+
+    if "CT" in folder_name:
+        z_scale_factor = 5 / scale_xy
+        verts[:, 2] *= z_scale_factor
+    else:
+        z_scale_factor = 1 / scale_xy
+        verts[:, 2] *= z_scale_factor  # Adjust the z-axis
+
+    return verts
 
 def create_figure(verts, faces, values, plane_position, plane_normal):
     """Create the Plotly figure with a toggle for the slicing plane."""
@@ -92,12 +114,16 @@ def create_figure(verts, faces, values, plane_position, plane_normal):
 
 
 # Main Script
-folder_path = "/Users/alexandergadin/Desktop/Group 1/MRI 1"
+folder_path = "./sample_group/CT_1"
 volume = load_images(folder_path)
 
 # Extract the mesh
 threshold_value = 1
 verts, faces, values = extract_mesh(volume, threshold=threshold_value)
+
+# Adjust scales
+verts = adjust_scales(verts, folder_path)
+
 
 # Define plane properties
 plane_position = [0, 0, 0]
