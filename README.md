@@ -12,11 +12,14 @@ This repository contains python files and jupiter notebooks for the analysis of 
 
 # Introduction
 
-## `visualize_3D_solid.ipynb`
+## `3D Viewer.ipynb`
 A simple 3D object viewer using plotly. The input is a singlefolder containing a stack of `.tif` images. The output is a 3D object viewer that can be rotated and zoomed in and out. 
 
 ## `surrace_classifier.ipynb`
 The Surface Classifier tool analyzes 3D image stacks to quantify surface characteristics, providing surface statistics and exporting a 3D mesh (`.obj` file) for further insights or 3D printing.
+
+## `Location_finder_EIT.ipynb`
+The Location Finder tool uses a trained nn-Unet segmentation model to predict where in the abdomen your organ can be. 
 
 # Installation
 Each tool is designed to be run in its own jupyter notebook. Run all cells in the notebook in order to use the tool.
