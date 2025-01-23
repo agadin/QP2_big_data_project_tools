@@ -12,12 +12,14 @@ This repository contains python files and jupiter notebooks for the analysis of 
 
 # Introduction
 
-## `visualize_3D_solid.py`
+## `visualize_3D_solid.ipynb`
 A simple 3D object viewer using plotly. The input is a singlefolder containing a stack of `.tif` images. The output is a 3D object viewer that can be rotated and zoomed in and out. 
 
+## `surrace_classifier.ipynb`
+The Surface Classifier tool analyzes 3D image stacks to quantify surface characteristics, providing surface statistics and exporting a 3D mesh (`.obj` file) for further insights or 3D printing.
 
 # Installation
-Each tool is designed to be run in its own jupyter notebook. At the start of the notebook the necessary libraries are imported using the `.txt` file with the same name as the notebook/python file.
+Each tool is designed to be run in its own jupyter notebook. Run all cells in the notebook in order to use the tool.
 
 # Usage
 
