@@ -18,6 +18,9 @@ A simple 3D object viewer using plotly. The input is a singlefolder containing a
 ## `surrace_classifier.ipynb`
 The Surface Classifier tool analyzes 3D image stacks to quantify surface characteristics, providing surface statistics and exporting a 3D mesh (`.obj` file) for further insights or 3D printing.
 
+## `2D_distance.ipynb`
+The 2D Distance tool calculates the distance between two points in a 2D image stack, providing insights the size of features or objects in the organ.
+
 ## `Location_finder_EIT.ipynb`
 The Location Finder tool uses a trained nn-Unet segmentation model to predict where in the abdomen your organ can be. 
 
