@@ -55,7 +55,7 @@ def adjust_scales(verts, folder_name):
 
 
     if "CT" in folder_name:
-        z_scale_factor = 5 / scale_xy
+        z_scale_factor = 4 / scale_xy
         verts[:, 2] *= z_scale_factor
     else:
         z_scale_factor = 1 / scale_xy
@@ -83,7 +83,7 @@ def create_figure(verts, faces, values, plane_position, plane_normal):
         x=x, y=y, z=z,
         i=i, j=j, k=k,
         intensity=normalized_values,
-        colorscale='Viridis',
+        colorscale='Gray',
         showscale=False,
         opacity=1.0,
         name="Isosurface",
