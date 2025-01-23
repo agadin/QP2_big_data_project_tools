@@ -1,3 +1,0 @@
-trimesh
-pyvista
-scikit-learn
