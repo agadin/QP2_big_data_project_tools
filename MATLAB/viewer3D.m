@@ -1,4 +1,3 @@
-
 folder_path = uigetdir(pwd, 'Select the folder containing the .tif file');
 
     if folder_path == 0
@@ -6,7 +5,7 @@ folder_path = uigetdir(pwd, 'Select the folder containing the .tif file');
     else
         disp(['Selected folder: ', folder_path]);
     end
-imds = imageDatastore(folderPath, ...
+imds = imageDatastore(folder_path, ...
     'FileExtensions', {'.tif'}, ...
     'IncludeSubfolders', false); 
 
@@ -23,7 +22,7 @@ while hasdata(imds)
     k = k + 1;
 end
 
-if contains(folderPath, 'CT', 'IgnoreCase', true)
+if contains(folder_path, 'CT', 'IgnoreCase', true)
     zSpacing = 100; 
 else
     zSpacing = 50; 
@@ -41,4 +40,3 @@ volshow(scaledVolume, ...
     'RenderingStyle', 'VolumeRendering'); 
 
 viewer.BackgroundColor = [0, 0, 0]; 
-
