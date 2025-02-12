@@ -24,6 +24,8 @@ The 2D Distance tool calculates the distance between two points in a 2D image st
 ## `Location_finder_EIT.ipynb`
 The Location Finder tool uses a trained nn-Unet segmentation model to predict where in the abdomen your organ can be. 
 
+## `volume_compare` 
+Plots your .obj file from surface classifier on the same axis as common objects and against a to scale human body outline. Helpful for gauging relative size.
 # Installation
 Each tool is designed to be run in its own jupyter notebook. Run all cells in the notebook in order to use the tool.
 
