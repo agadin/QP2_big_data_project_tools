@@ -30,6 +30,9 @@ Plots your .obj file from surface classifier on the same axis as common objects 
 ## `surface_analysis`
 Computes texture features using the gray-level co-occurrence matrix (GLCM) method (extracting metrics like contrast, correlation, energy, and homogeneity), saves these results to a CSV file, and finally displays each image with its corresponding texture analysis results overlaid.
 
+## `shape_classifier`
+Analyzes organ geometry and intensity to compute centroid, min/max radius, area, and intensity variation. Also estimates the organ's total mass using pixel intensity, slice thickness, and uncertainty propagation, saving results to a CSV file for further analysis.
+
 # Installation
 Each tool is designed to be run in its own jupyter notebook. Run all cells in the notebook in order to use the tool.
 
